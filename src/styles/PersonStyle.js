@@ -72,7 +72,7 @@ export const PersonContainer = styled(MovieContainer)`
     height: 100vh;
     display: grid;
     place-items: center;
-    @media ${deviceWidth.mobile_sm}{
+    @media ${deviceWidth.tablet_md}{
           height: auto;
     }
     
