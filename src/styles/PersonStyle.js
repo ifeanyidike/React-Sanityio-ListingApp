@@ -76,6 +76,12 @@ export const PersonContainer = styled(MovieContainer)`
           height: auto;
     }
     
+    .title::before, .title::after{
+        @media ${deviceWidth.mobile_lg}{
+            display:none;
+        }
+    }
+    
   .personpanel{      
       display: flex;
       align-items: center;
