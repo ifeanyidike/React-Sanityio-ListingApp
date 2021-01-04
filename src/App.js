@@ -19,6 +19,7 @@ function App() {
     <ThemeProvider theme={Theme} >
       <Router>
         <GlobalStyle />
+        <div className="contentwrap">
         <Header />
         <Switch>
             <Route path="/movie/">
@@ -34,6 +35,7 @@ function App() {
               <MoviesList />
             </Route>
         </Switch>
+        </div>
         <Footer />
       </Router>
     </ThemeProvider>

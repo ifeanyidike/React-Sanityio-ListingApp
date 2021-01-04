@@ -72,7 +72,9 @@ export const PersonContainer = styled(MovieContainer)`
     height: 100vh;
     display: grid;
     place-items: center;
-                  
+    @media ${deviceWidth.mobile_sm}{
+          height: auto;
+    }
     
   .personpanel{      
       display: flex;
@@ -94,7 +96,18 @@ export const PersonContainer = styled(MovieContainer)`
         flex-direction: column;
         align-items: center; 
         
-        .person{                                            
+        .person{         
+                                               
+            img{                                               
+                max-width: 200px;
+                @media ${deviceWidth.mobile_md}{
+                  max-width: 150px
+                  
+                } 
+                @media ${deviceWidth.mobile_xs}{
+                  max-width: 70px
+                }                
+            }                        
             
             @media ${deviceWidth.tablet}{                    
                     margin: 0 auto;

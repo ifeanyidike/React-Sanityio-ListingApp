@@ -8,8 +8,15 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
         background-color: ${props => props.theme.lighter};        
-        overflow-x: hidden;            
+        overflow-x: hidden;   
+        min-height: 100vh;     
+        display: grid;
+        grid-template-rows: auto 1fr auto;
     }
+    #root{        
+        display: grid;
+        flex-direction: column;   
+    }    
     h1,h2,h3, label{
         font-family: 'Aclonica', sans-serif;        
     }
@@ -103,14 +110,16 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     
-    footer{        
-        padding: 10px 0;
-        margin-top: 20px;
-        font-size: 0.875rem;
-        text-align: center;
+    footer{                
+        min-height: 30px;        
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+        font-size: 0.875rem;        
         background-color: ${props => props.theme.midDarkBlue};      
-        color: ${props => props.theme.white};
-        
+        color: ${props => props.theme.white};        
     }
     
 `

@@ -129,14 +129,18 @@ export const MovieContainer = styled.div`
                 width: fit-content;
                 margin: 0 auto;
                 position: relative;
-                color: ${props =>props.theme.bodyText}
+                color: ${props =>props.theme.bodyText};
+               
             }                                  
             .title::before, .title::after{
                 content: '';       
                 position: absolute;         
                 border-bottom: 2px solid ${props => props.theme.goldish};
                 width: 100px;                                
-                top: 50%;                
+                top: 50%;        
+                @media ${deviceWidth.mobile_sm}{
+                  display:none;
+                }         
             }           
             .title::before{
                 left: -110px

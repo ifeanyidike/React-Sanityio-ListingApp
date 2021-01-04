@@ -1,4 +1,5 @@
 export const deviceWidth = {
+    mobile_xs: `(max-width: 280px)`,
     mobile_sm: `(max-width: 320px)`,
     mobile_md: `(max-width: 375px)`,
     mobile_lg: `(max-width: 425px)`,
