@@ -33,7 +33,7 @@ const Paginate = ({page, setPage, lastPage}) => {
         history.push(`${pathName}?page=1`)
     }
     return (
-        <div>
+        <div className="paginate">
             <IconButton onClick={handleFirst}
                 disabled = {page === 1}>
                 <SkipPreviousIcon fontSize="large" />

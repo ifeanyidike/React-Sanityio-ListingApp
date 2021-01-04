@@ -26,9 +26,13 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     p, span, div, input{
-        font-family: 'Jost', sans-serif;
-       
+        font-family: 'Jost', sans-serif;       
     }
+    
+    .paginate button{
+        color: ${props => props.theme.bodyText}
+    }
+    
     .header{
         z-index: 5;    
         background-color: ${props => props.theme.midDarkBlue};                
@@ -39,7 +43,11 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: space-between;
         position: fixed;
         top: 0;
-        width: 95%;
+        width: 100%;
+        @media ${deviceWidth.laptop_lg}{
+            width: 97%;            
+        }               
+        
         @media ${deviceWidth.tablet}{
             width: 100%;
             justify-content: space-around;
